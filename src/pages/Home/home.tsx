@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./home.module.scss";
 
-export default function home() {
-  const onClickStartBtn = () => {};
+export default function Home() {
+  const navigate = useNavigate();
+
+  const onClickStartBtn = () => {
+    return navigate("/profile");
+  };
 
   return (
     <>
