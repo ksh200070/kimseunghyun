@@ -1,23 +1,28 @@
+import { BasicProfile } from "../../types/Profile";
 import styles from "./ProfileCard.module.scss";
 
 interface ProfileProps {
-  profile: {
-    id: number;
-    name: string;
-    img: string;
-  };
+  profile: BasicProfile;
+  onClick: () => void;
+  size?: "sm" | "md";
 }
 
-const ProfileCardComponent: React.FC<ProfileProps> = ({ profile }) => {
+const ProfileCardComponent: React.FC<ProfileProps> = ({
+  profile,
+  onClick,
+  size = "md",
+}) => {
   return (
-    <>
-      <div className={styles.profile} key={profile.id}>
-        <div className={styles.img}>
-          <img src={profile.img} alt="" />
-        </div>
-        <span className={styles.name}>{profile.name}</span>
+    <div
+      className={`${styles.profile} ${styles[size]}`}
+      key={profile.id}
+      onClick={onClick}
+    >
+      <div className={styles.img}>
+        <img src={profile.img} alt="" />
       </div>
-    </>
+      <span className={styles.name}>{profile.name}</span>
+    </div>
   );
 };
 

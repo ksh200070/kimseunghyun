@@ -3,13 +3,27 @@ import ImgBasic from "../../assets/image/basic.png";
 import ImgStudent from "../../assets/image/student.png";
 import ImgAdult from "../../assets/image/adult.png";
 import ProfileCardComponent from "../../component/ProfileCard/ProfileCard";
+import { useNavigate } from "react-router-dom";
+import { useCallback, useState } from "react";
+import { BasicProfile } from "../../types/Profile";
 
 export default function Profile() {
-  const profileList = [
+  const navigate = useNavigate();
+  const [selectedProfile, setSelectedProfile] = useState<BasicProfile | null>(
+    null
+  );
+  const profileList: BasicProfile[] = [
     { id: 1, name: "기본 프로필", img: ImgBasic },
     { id: 2, name: "대학생", img: ImgStudent },
     { id: 3, name: "개발자", img: ImgAdult },
   ];
+
+  const onClickProfile = useCallback(
+    (profile: BasicProfile) => {
+      navigate(`/main`, { state: { profile } });
+    },
+    [navigate]
+  );
 
   return (
     <>
@@ -18,7 +32,10 @@ export default function Profile() {
         <div className={styles["profile-list"]}>
           {profileList.map((profile) => {
             return (
-              <ProfileCardComponent profile={profile}></ProfileCardComponent>
+              <ProfileCardComponent
+                profile={profile}
+                onClick={() => onClickProfile(profile)}
+              ></ProfileCardComponent>
             );
           })}
         </div>
