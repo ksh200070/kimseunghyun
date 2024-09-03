@@ -65,7 +65,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ folderName }) => {
   return (
     <div className={styles.imgs}>
       {sortedImageKeys.map((key, index) => (
-        <img key={index} src={images[key]} alt={key} />
+        <img key={key} src={images[key]} alt={key} />
       ))}
     </div>
   );

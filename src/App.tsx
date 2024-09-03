@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/home";
-import Main from "./pages/main/main";
+import FirstProfile from "./pages/main/FirstProfile/firstProfile";
+import SecondProfile from "./pages/main/SecondProfile/secondProfile";
+import ThirdProfile from "./pages/main/ThirdProfile/thirdProfile";
 import Profile from "./pages/Profile/profile";
 
 function App() {
@@ -9,7 +11,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/main" element={<Main />} />
+        <Route path="/basic" element={<FirstProfile />} />
+        <Route path="/student" element={<SecondProfile />} />
+        <Route path="/developer" element={<ThirdProfile />} />
       </Routes>
     </div>
   );

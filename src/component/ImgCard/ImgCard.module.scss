@@ -4,6 +4,7 @@
   flex-direction: column;
   font-size: 12px;
   gap: 12px;
+  margin-top: 20px;
 
   .content-header {
     display: flex;
@@ -17,6 +18,11 @@
       gap: 8px;
       align-items: center;
       justify-content: center;
+    }
+
+    .right {
+      display: flex;
+      gap: 16px;
 
       .members {
         display: flex;
@@ -28,15 +34,26 @@
           height: 20px;
         }
       }
-    }
 
-    .tags {
-      display: flex;
-      gap: 8px;
+      .tags {
+        display: flex;
+        gap: 8px;
+      }
     }
+  }
+
+  .description {
+    line-height: 1.6;
+    font-size: 14px;
+    color: #e8e8e8;
   }
 
   .link {
     color: white;
+  }
+
+  .position {
+    color: #949494;
+    text-align: center;
   }
 }
