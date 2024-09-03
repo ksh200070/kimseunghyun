@@ -1,47 +1,53 @@
-import { Content } from "../../types/Content";
+import { Project } from "../../types/Content";
 import styles from "./ImgCard.module.scss";
 import IconUser from "../../assets/icon/icon_user_black.svg";
 import Tag from "../Tag/Tag";
 import ImageGallery from "../ImageGallery/ImageGallery";
 
 interface ImgCardProps {
-  content: Content;
+  project: Project;
 }
 
-const ImgCardComponent: React.FC<ImgCardProps> = ({ content }) => {
+const ImgCardComponent: React.FC<ImgCardProps> = ({ project }) => {
   return (
-    <div className={styles["content"]} key={content.id}>
+    <div className={styles["content"]}>
       <div className={styles["content-header"]}>
         <div className={styles["info"]}>
-          <span className={styles.title}>{content.title}</span>
+          {project.id}.<span className={styles.title}>{project.title}</span>
+        </div>
+        <div className={styles.right}>
           <div className={styles.members}>
-            {Array(content.memberCount).fill(
+            {Array(project.memberCount).fill(
               <img src={IconUser} className={styles["icon-user"]} alt="" />
             )}
           </div>
-        </div>
-        <div className={styles.tags}>
-          {content.tags?.map((tag: string, i: number) => {
-            return <Tag key={i} tagName={tag} size="sm"></Tag>;
-          })}
+          <div className={styles.tags}>
+            {project.tags?.map((tag: string, i: number) => {
+              return <Tag key={i} tagName={tag} size="sm"></Tag>;
+            })}
+          </div>
         </div>
       </div>
-      <div className={styles.description}>{content.description}</div>
 
-      {content.imgFolder && (
-        <div className={styles.imgs}>
-          <ImageGallery folderName={content.imgFolder}></ImageGallery>
-        </div>
-      )}
-      {content.link && (
+      <div className={styles.description}>{project.description}</div>
+
+      {project.link && (
         <a
           className={styles.link}
-          href={content.link[0].url}
+          href={project.link[0].url}
           target="_blank"
           rel="noopener noreferrer"
         >
-          {content.link[0].name}
+          {project.link[0].name}
         </a>
+      )}
+      {project.imgFolder && (
+        <div className={styles.imgs}>
+          <ImageGallery folderName={project.imgFolder}></ImageGallery>
+        </div>
+      )}
+      {project.position && (
+        <span className={styles.position}>{project.position}</span>
       )}
     </div>
   );

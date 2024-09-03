@@ -1,10 +1,11 @@
 import styles from "./ContentCard.module.scss";
 
 import Tag from "../Tag/Tag";
+import { ReactNode } from "react";
 
 interface ContentCardProps {
   title: string;
-  contents: string;
+  contents: string | ReactNode;
   onClick?: () => void;
   size?: "sm" | "md";
   tags?: string[];

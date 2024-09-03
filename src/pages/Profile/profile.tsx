@@ -20,7 +20,13 @@ export default function Profile() {
 
   const onClickProfile = useCallback(
     (profile: BasicProfile) => {
-      navigate(`/main`, { state: { profile } });
+      if (profile.id === 1) {
+        navigate(`/basic`, { state: { profile } });
+      } else if (profile.id === 2) {
+        navigate(`/student`, { state: { profile } });
+      } else if (profile.id === 3) {
+        navigate(`/developer`, { state: { profile } });
+      }
     },
     [navigate]
   );
@@ -30,9 +36,10 @@ export default function Profile() {
       <div className={styles.container}>
         <div className={styles.header}>프로필을 선택해주세요</div>
         <div className={styles["profile-list"]}>
-          {profileList.map((profile) => {
+          {profileList.map((profile, i) => {
             return (
               <ProfileCardComponent
+                key={profile.id}
                 profile={profile}
                 onClick={() => onClickProfile(profile)}
               ></ProfileCardComponent>
