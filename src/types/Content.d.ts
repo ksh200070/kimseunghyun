@@ -16,5 +16,7 @@ export interface Project {
   position?: ReactNode | string;
   tags?: string[];
   imgFolder?: string;
+  video?: string;
   link?: { name: string; url: string }[];
+  component?: ReactNode;
 }
