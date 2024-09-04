@@ -4,14 +4,11 @@ import ImgStudent from "../../assets/image/student.png";
 import ImgAdult from "../../assets/image/adult.png";
 import ProfileCardComponent from "../../component/ProfileCard/ProfileCard";
 import { useNavigate } from "react-router-dom";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { BasicProfile } from "../../types/Profile";
 
 export default function Profile() {
   const navigate = useNavigate();
-  const [selectedProfile, setSelectedProfile] = useState<BasicProfile | null>(
-    null
-  );
   const profileList: BasicProfile[] = [
     { id: 1, name: "기본 프로필", img: ImgBasic },
     { id: 2, name: "대학생", img: ImgStudent },
