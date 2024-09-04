@@ -4,9 +4,21 @@ import { fabric } from "fabric";
 import styles from "./thirdProfile.module.scss";
 import ProfileCard from "../../../component/ProfileCard/ProfileCard";
 import IconSelectTool from "../../../assets/icon/icon_select_tool.png";
-import IconPenTool from "../../../assets/icon/icon_pen_tool.png";
+import IconBrushTool from "../../../assets/icon/icon_brush_tool.png";
 import IconUndoTool from "../../../assets/icon/icon_undo_tool.png";
 import IconRedoTool from "../../../assets/icon/icon_redo_tool.png";
+import IconDownloadTool from "../../../assets/icon/icon_download_tool.png";
+
+const colorPalette = [
+  { color: "red", hexCode: "#f02304" },
+  { color: "orange", hexCode: "#ff8000" },
+  { color: "yellow", hexCode: "#ffe70f" },
+  { color: "green", hexCode: "#17e132" },
+  { color: "mint", hexCode: "#00fffb" },
+  { color: "blue", hexCode: "#000dff" },
+  { color: "black", hexCode: "#000" },
+  { color: "pink", hexCode: "#ff1d8e" },
+];
 
 export default function ThirdProfile() {
   const navigate = useNavigate();
@@ -18,6 +30,11 @@ export default function ThirdProfile() {
   const [isLocked, setIsLocked] = useState<boolean>(false);
   const [history, setHistory] = useState<fabric.Object[] | undefined>([]);
   const canvasRef = useRef(null);
+
+  const [brushColor, setBrushColor] = useState<{
+    color: string;
+    hexCode: string;
+  }>(colorPalette[0]);
 
   useEffect(() => {
     if (!canvasRef.current) return;
@@ -42,10 +59,10 @@ export default function ThirdProfile() {
       canvas.isDrawingMode = false;
     };
 
-    const handlePenTool = () => {
+    const handleBrushTool = () => {
       canvas.isDrawingMode = true;
       canvas.freeDrawingBrush.width = 5;
-      canvas.freeDrawingBrush.color = "black";
+      canvas.freeDrawingBrush.color = brushColor.hexCode;
     };
 
     switch (activeTool) {
@@ -53,8 +70,8 @@ export default function ThirdProfile() {
         handleSelectTool();
         break;
 
-      case "pen":
-        handlePenTool();
+      case "brush":
+        handleBrushTool();
         break;
     }
 
@@ -70,6 +87,12 @@ export default function ThirdProfile() {
       canvas.on("object:removed", saveHistory);
     }
   }, [canvas, activeTool, isLocked]);
+
+  useEffect(() => {
+    if (!canvas) return;
+
+    canvas.freeDrawingBrush.color = brushColor.hexCode;
+  }, [brushColor]);
 
   const onClickSwitchProfile = () => {
     return navigate("/profile");
@@ -97,6 +120,24 @@ export default function ThirdProfile() {
     }
   };
 
+  const handleExportPng = () => {
+    if (canvas) {
+      const url = canvas.toDataURL();
+      const a = document.createElement("a");
+
+      a.href = url;
+      a.download = "sh_protfolio_free_drawing.png";
+      a.click();
+    }
+  };
+
+  const handleColorPalette = (selectedColor: {
+    color: string;
+    hexCode: string;
+  }) => {
+    setBrushColor(selectedColor);
+  };
+
   return (
     <>
       <div className={styles.container}>
@@ -114,7 +155,7 @@ export default function ThirdProfile() {
           <div className={styles["canvas-container"]}>
             <div className={styles["tool-bar"]}>
               <div className={styles["action-tools"]}>
-                {["select", "pen"].map((tool, i) => {
+                {["select", "brush"].map((tool, i) => {
                   return (
                     <button
                       className={styles.tool}
@@ -122,39 +163,60 @@ export default function ThirdProfile() {
                       disabled={activeTool === tool}
                     >
                       <img
-                        src={tool === "select" ? IconSelectTool : IconPenTool}
+                        className={styles.icon}
+                        src={tool === "select" ? IconSelectTool : IconBrushTool}
                         alt=""
                       />
                     </button>
                   );
                 })}
+                {activeTool === "brush" && (
+                  <div className={styles.palette}>
+                    {colorPalette.map((color, i) => {
+                      return (
+                        <div
+                          className={`${styles.color} ${
+                            brushColor.color === color.color && styles.selected
+                          }`}
+                          style={{ backgroundColor: color.hexCode }}
+                          onClick={() => handleColorPalette(color)}
+                        ></div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
+
               <div className={styles["revert-tools"]}>
                 <button
                   className={styles.tool}
-                  disabled={activeTool === "undo"}
                   onClick={() => handleUndoClick()}
                 >
-                  <img src={IconUndoTool} alt="" />
+                  <img className={styles.icon} src={IconUndoTool} alt="" />
                 </button>
                 <button
                   className={styles.tool}
-                  disabled={activeTool === "redo"}
                   onClick={() => handleRedoClick()}
                 >
-                  <img src={IconRedoTool} alt="" />
+                  <img className={styles.icon} src={IconRedoTool} alt="" />
+                </button>
+
+                <div className={styles.devider}></div>
+
+                <button
+                  className={`${styles["download-button"]}`}
+                  onClick={() => handleExportPng()}
+                >
+                  <img
+                    className={`${styles.download} ${styles.icon}`}
+                    src={IconDownloadTool}
+                    alt=""
+                  />
                 </button>
               </div>
             </div>
             <canvas ref={canvasRef} />
           </div>
-          {/* <div>
-            <ContentCard
-              onClick={() => navigate("/openApi")}
-              title="알기 쉬운 집수리 동영상 정보"
-              contents="서울시의 저층 노후 주거지 수리시 참고할 수 있는 동영상 정보를 제공합니다."
-            ></ContentCard>
-          </div> */}
         </section>
       </div>
     </>
