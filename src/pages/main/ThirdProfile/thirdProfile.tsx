@@ -13,7 +13,7 @@ const projects: Project[] = [
     memberCount: 0,
     description:
       "여러가지 색상의 브러쉬, 되돌리기, 다운로드 및 저장 의 기능을 제공합니다.",
-    video: "/videos/paint.mov",
+    video: "/portfolio/videos/paint.mov",
     link: [
       {
         name: "깃허브 코드 확인하러 가기",
