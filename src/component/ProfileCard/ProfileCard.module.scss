@@ -1,0 +1,68 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .img {
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .name {
+    color: #d9d9d9;
+    font-weight: 400;
+  }
+
+  &:hover {
+    .name {
+      font-weight: bold;
+    }
+  }
+
+  &.sm {
+    width: 40px;
+    gap: 4px;
+
+    .img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .name {
+      font-size: 8px;
+    }
+
+    &:hover {
+      .img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+
+  &.md {
+    width: 120px;
+    gap: 10px;
+
+    .img {
+      width: 100px;
+      height: 100px;
+    }
+
+    &:hover {
+      .img {
+        width: 102px;
+        height: 102px;
+      }
+    }
+  }
+}

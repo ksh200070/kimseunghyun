@@ -1,0 +1,59 @@
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 12px;
+  margin-top: 20px;
+
+  .content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+
+    .info {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .right {
+      display: flex;
+      gap: 16px;
+
+      .members {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon-user {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .tags {
+        display: flex;
+        gap: 8px;
+      }
+    }
+  }
+
+  .description {
+    line-height: 1.6;
+    font-size: 14px;
+    color: #e8e8e8;
+  }
+
+  .link {
+    color: white;
+  }
+
+  .position {
+    color: #949494;
+    text-align: center;
+  }
+}
