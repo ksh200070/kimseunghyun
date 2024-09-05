@@ -18,11 +18,11 @@ export default function Profile() {
   const onClickProfile = useCallback(
     (profile: BasicProfile) => {
       if (profile.id === 1) {
-        navigate(`/basic`, { state: { profile } });
+        navigate(`/portfolio/basic`, { state: { profile } });
       } else if (profile.id === 2) {
-        navigate(`/student`, { state: { profile } });
+        navigate(`/portfolio/student`, { state: { profile } });
       } else if (profile.id === 3) {
-        navigate(`/developer`, { state: { profile } });
+        navigate(`/portfolio/developer`, { state: { profile } });
       }
     },
     [navigate]

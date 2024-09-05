@@ -29,7 +29,7 @@ export default function ThirdProfile() {
   const { profile } = state;
 
   const onClickSwitchProfile = () => {
-    return navigate("/profile");
+    return navigate("/portfolio/profile");
   };
 
   return (
