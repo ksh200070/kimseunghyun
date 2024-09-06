@@ -8,7 +8,7 @@ export default function BasicProfile() {
   const { profile } = state;
 
   const onClickSwitchProfile = () => {
-    return navigate("/portfolio/profile");
+    return navigate("/profile");
   };
 
   return (
