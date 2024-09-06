@@ -11,6 +11,7 @@
     color: #fff;
     padding: 20px;
     font-size: 28px;
+    @include font-4;
   }
 
   .body {
@@ -22,6 +23,7 @@
     color: #fff;
     gap: 4px;
     font-size: 20px;
+    @include font-4;
 
     .start-button {
       padding: 10px;
@@ -30,7 +32,7 @@
       border: none;
       margin-top: 20px;
       border-radius: 4px;
-      font-weight: bold;
+      @include font-8;
       background-color: #5e5e5e;
       color: #fff;
 

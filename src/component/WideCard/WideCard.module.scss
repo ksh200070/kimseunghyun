@@ -21,17 +21,19 @@
 
     .title {
       font-size: 20px;
-      font-weight: bold;
+      @include font-7;
       text-align: center;
     }
 
     .description {
       font-size: 12px;
+      @include font-4;
     }
 
     a {
       color: #fff;
       font-size: 12px;
+      @include font-4;
       align-self: flex-end;
       margin-top: 12px;
 

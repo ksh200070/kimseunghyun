@@ -1,11 +1,11 @@
-import styles from "./profile.module.scss";
-import ImgBasic from "../../assets/image/basic.png";
-import ImgStudent from "../../assets/image/student.png";
-import ImgAdult from "../../assets/image/adult.png";
-import ProfileCardComponent from "../../component/ProfileCard/ProfileCard";
-import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
-import { BasicProfile } from "../../types/Profile";
+import { useNavigate } from "react-router-dom";
+import styles from "./profile.module.scss";
+import ImgAdult from "@assets/image/adult.png";
+import ImgBasic from "@assets/image/basic.png";
+import ImgStudent from "@assets/image/student.png";
+import ProfileCardComponent from "@component/ProfileCard/ProfileCard";
+import { BasicProfile } from "types/Profile";
 
 export default function Profile() {
   const navigate = useNavigate();

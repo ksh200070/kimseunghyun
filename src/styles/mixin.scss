@@ -1,0 +1,36 @@
+@mixin font-1 {
+  font-family: "Pretendard";
+  font-weight: 100; // Thin
+}
+@mixin font-2 {
+  font-family: "Pretendard";
+  font-weight: 200; // ExtraLight
+}
+@mixin font-3 {
+  font-family: "Pretendard";
+  font-weight: 300; // Light
+}
+@mixin font-4 {
+  font-family: "Pretendard";
+  font-weight: 400; // Regular
+}
+@mixin font-5 {
+  font-family: "Pretendard";
+  font-weight: 500; // Medium
+}
+@mixin font-6 {
+  font-family: "Pretendard";
+  font-weight: 600; // SemiBold
+}
+@mixin font-7 {
+  font-family: "Pretendard";
+  font-weight: 700; // Bold
+}
+@mixin font-8 {
+  font-family: "Pretendard";
+  font-weight: 800; // ExtraBold
+}
+@mixin font-9 {
+  font-family: "Pretendard";
+  font-weight: 900; // Black
+}

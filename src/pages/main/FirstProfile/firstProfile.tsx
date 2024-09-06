@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import ProfileCard from "../../../component/ProfileCard/ProfileCard";
 import styles from "./firstProfile.module.scss";
+import ProfileCard from "@component/ProfileCard/ProfileCard";
 
 export default function BasicProfile() {
   const navigate = useNavigate();

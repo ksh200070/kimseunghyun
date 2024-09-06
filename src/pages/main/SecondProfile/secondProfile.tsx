@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./secondProfile.module.scss";
-import Tag from "../../../component/Tag/Tag";
-import { Project, Projects } from "../../../types/Content";
-import ImgCard from "../../../component/ImgCard/ImgCard";
-import ProfileCard from "../../../component/ProfileCard/ProfileCard";
+import Tag from "@component/Tag/Tag";
+import ImgCard from "@component/ImgCard/ImgCard";
+import ProfileCard from "@component/ProfileCard/ProfileCard";
+import { Project, Projects } from "types/Content";
 
 const projects: Projects[] = [
   {
