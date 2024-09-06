@@ -19,12 +19,12 @@
 
   .name {
     color: #d9d9d9;
-    font-weight: 400;
+    @include font-4;
   }
 
   &:hover {
     .name {
-      font-weight: bold;
+      @include font-7;
     }
   }
 
@@ -39,6 +39,7 @@
 
     .name {
       font-size: 8px;
+      @include font-4;
     }
 
     &:hover {

@@ -15,11 +15,12 @@
 
     .title {
       font-size: 18px;
-      font-weight: bold;
+      @include font-7;
     }
 
     .contents {
       font-size: 12px;
+      @include font-4;
     }
   }
 
