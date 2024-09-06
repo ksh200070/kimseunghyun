@@ -17,12 +17,14 @@ export default function Profile() {
 
   const onClickProfile = useCallback(
     (profile: BasicProfile) => {
+      localStorage.setItem("profile", JSON.stringify(profile));
+
       if (profile.id === 1) {
-        navigate(`/basic`, { state: { profile } });
+        navigate(`/basic`);
       } else if (profile.id === 2) {
-        navigate(`/student`, { state: { profile } });
+        navigate(`/student`);
       } else if (profile.id === 3) {
-        navigate(`/developer`, { state: { profile } });
+        navigate(`/developer`);
       }
     },
     [navigate]

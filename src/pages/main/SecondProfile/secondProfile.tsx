@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./secondProfile.module.scss";
 import Tag from "@component/Tag/Tag";
 import ImgCard from "@component/ImgCard/ImgCard";
 import ProfileCard from "@component/ProfileCard/ProfileCard";
 import { Project, Projects } from "types/Content";
+import { BasicProfile } from "types/Profile";
+import ImgStudent from "@assets/image/student.png";
 
 const projects: Projects[] = [
   {
@@ -134,9 +136,22 @@ const projects: Projects[] = [
 
 export default function SecondProfile() {
   const navigate = useNavigate();
-  const { state } = useLocation();
-  const { profile } = state;
+  // const { state } = useLocation();
+  // const { profile } = state;
   const [selectedTag, setSelectedTag] = useState<string>("개발");
+  const [profile, setProfile] = useState<BasicProfile>({
+    id: 2,
+    name: "대학생",
+    img: ImgStudent,
+  });
+
+  useEffect(() => {
+    const currentProfile = localStorage.getItem("profile");
+
+    if (currentProfile) {
+      setProfile(() => JSON.parse(currentProfile));
+    }
+  }, []);
 
   const tags = ["개발", "UX/UI 서비스 디자인"];
 

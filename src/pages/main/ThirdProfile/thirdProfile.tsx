@@ -1,9 +1,12 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import styles from "./thirdProfile.module.scss";
 import ProfileCard from "@component/ProfileCard/ProfileCard";
 import WideCardComponent from "@component/WideCard/WideCard";
 import PaintBoardComponent from "@component/PaintBoard/PaintBoard";
 import { Project } from "types/Content";
+import { BasicProfile } from "types/Profile";
+import ImgAdult from "@assets/image/adult.png";
 
 const projects: Project[] = [
   {
@@ -25,8 +28,19 @@ const projects: Project[] = [
 
 export default function ThirdProfile() {
   const navigate = useNavigate();
-  const { state } = useLocation();
-  const { profile } = state;
+  const [profile, setProfile] = useState<BasicProfile>({
+    id: 3,
+    name: "개발자",
+    img: ImgAdult,
+  });
+
+  useEffect(() => {
+    const currentProfile = localStorage.getItem("profile");
+
+    if (currentProfile) {
+      setProfile(() => JSON.parse(currentProfile));
+    }
+  }, []);
 
   const onClickSwitchProfile = () => {
     return navigate("/profile");
