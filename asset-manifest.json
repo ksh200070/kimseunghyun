@@ -1,10 +1,19 @@
 {
   "files": {
-    "main.css": "https://ksh200070.github.io/portfolio/static/css/main.3d2369b4.css",
-    "main.js": "https://ksh200070.github.io/portfolio/static/js/main.246a2f69.js",
+    "main.css": "https://ksh200070.github.io/portfolio/static/css/main.6b3943f6.css",
+    "main.js": "https://ksh200070.github.io/portfolio/static/js/main.2455d91e.js",
     "static/media/1.jpg": "https://ksh200070.github.io/portfolio/static/media/1.0b709be970e978ee43c9.jpg",
     "static/media/96.png": "https://ksh200070.github.io/portfolio/static/media/96.cf44f891d0464bb43a07.png",
     "static/media/2.jpg": "https://ksh200070.github.io/portfolio/static/media/2.d4bda1c664f3a764fad2.jpg",
+    "static/media/Pretendard-Black.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-Black.c51355ddc1caec596031.woff",
+    "static/media/Pretendard-ExtraBold.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-ExtraBold.f6491e200d1fb5c5917b.woff",
+    "static/media/Pretendard-Bold.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-Bold.1f1dbbbf311ffffcc770.woff",
+    "static/media/Pretendard-SemiBold.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-SemiBold.9f6b39f88e7e6a3fd0b2.woff",
+    "static/media/Pretendard-Medium.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-Medium.edd5e28caa1cc4a9e0b7.woff",
+    "static/media/Pretendard-Light.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-Light.7d1a33b829142e833fb9.woff",
+    "static/media/Pretendard-Regular.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-Regular.303253288b0ba99db532.woff",
+    "static/media/Pretendard-ExtraLight.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-ExtraLight.caca3ea2e764095a60e9.woff",
+    "static/media/Pretendard-Thin.woff": "https://ksh200070.github.io/portfolio/static/media/Pretendard-Thin.e7b3f421a3a379ef4137.woff",
     "static/media/5.jpg": "https://ksh200070.github.io/portfolio/static/media/5.2e8c9f7d7db7dc6399b3.jpg",
     "static/media/92.png": "https://ksh200070.github.io/portfolio/static/media/92.5f85235d1b013921c69a.png",
     "static/media/3.jpg": "https://ksh200070.github.io/portfolio/static/media/3.985fb352b717ffad73db.jpg",
@@ -74,11 +83,11 @@
     "static/media/icon_download_tool.png": "https://ksh200070.github.io/portfolio/static/media/icon_download_tool.a061f3a52bd3a82485a6.png",
     "static/media/icon_user_black.svg": "https://ksh200070.github.io/portfolio/static/media/icon_user_black.527e0a5f12c4697d4b681d98a2d2dda2.svg",
     "index.html": "https://ksh200070.github.io/portfolio/index.html",
-    "main.3d2369b4.css.map": "https://ksh200070.github.io/portfolio/static/css/main.3d2369b4.css.map",
-    "main.246a2f69.js.map": "https://ksh200070.github.io/portfolio/static/js/main.246a2f69.js.map"
+    "main.6b3943f6.css.map": "https://ksh200070.github.io/portfolio/static/css/main.6b3943f6.css.map",
+    "main.2455d91e.js.map": "https://ksh200070.github.io/portfolio/static/js/main.2455d91e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d2369b4.css",
-    "static/js/main.246a2f69.js"
+    "static/css/main.6b3943f6.css",
+    "static/js/main.2455d91e.js"
   ]
 }
