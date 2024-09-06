@@ -1,9 +1,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./thirdProfile.module.scss";
-import ProfileCard from "../../../component/ProfileCard/ProfileCard";
-import { Project } from "../../../types/Content";
-import WideCardComponent from "../../../component/WideCard/WideCard";
-import PaintBoardComponent from "../../../component/PaintBoard/PaintBoard";
+import ProfileCard from "@component/ProfileCard/ProfileCard";
+import WideCardComponent from "@component/WideCard/WideCard";
+import PaintBoardComponent from "@component/PaintBoard/PaintBoard";
+import { Project } from "types/Content";
 
 const projects: Project[] = [
   {

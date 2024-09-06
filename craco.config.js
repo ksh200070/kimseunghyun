@@ -11,7 +11,7 @@ module.exports = {
   webpack: {
     alias: {
       "@src": path.resolve(__dirname, "./src"),
-      "@components": path.resolve(__dirname, "./src/components"),
+      "@component": path.resolve(__dirname, "./src/component"),
       "@pages": path.resolve(__dirname, "./src/pages"),
       "@styles": path.resolve(__dirname, "./src/styles"),
       "@types": path.resolve(__dirname, "./src/types"),
