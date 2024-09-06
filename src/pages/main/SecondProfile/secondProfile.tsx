@@ -169,7 +169,7 @@ export default function SecondProfile() {
           <ProfileCard
             size="sm"
             profile={profile}
-            onClick={() => navigate("/portfolio/profile")}
+            onClick={() => navigate("/profile")}
           ></ProfileCard>
           {/* <button>프로필 변경</button> */}
         </div>

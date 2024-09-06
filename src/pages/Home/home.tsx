@@ -5,7 +5,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const onClickStartBtn = () => {
-    return navigate("/portfolio/profile");
+    return navigate("/profile");
   };
 
   return (
