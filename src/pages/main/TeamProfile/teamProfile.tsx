@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import styles from "./secondProfile.module.scss";
+import styles from "./teamProfile.module.scss";
 import Tag from "@component/Tag/Tag";
 import ImgCard from "@component/ImgCard/ImgCard";
 import ProfileCard from "@component/ProfileCard/ProfileCard";
 import { Project, Projects } from "types/Content";
-import { BasicProfile } from "types/Profile";
-import ImgStudent from "@assets/image/student.png";
+import { Profile } from "types/Profile";
+import ImgTeam from "@assets/image/team.png";
 
 const projects: Projects[] = [
   {
@@ -134,15 +134,15 @@ const projects: Projects[] = [
   },
 ];
 
-export default function SecondProfile() {
+export default function TeamProfile() {
   const navigate = useNavigate();
   // const { state } = useLocation();
   // const { profile } = state;
   const [selectedTag, setSelectedTag] = useState<string>("개발");
-  const [profile, setProfile] = useState<BasicProfile>({
+  const [profile, setProfile] = useState<Profile>({
     id: 2,
     name: "대학생",
-    img: ImgStudent,
+    img: ImgTeam,
   });
 
   useEffect(() => {
@@ -184,7 +184,7 @@ export default function SecondProfile() {
           <ProfileCard
             size="sm"
             profile={profile}
-            onClick={() => navigate("/profile")}
+            onClick={() => navigate("/profiles")}
           ></ProfileCard>
           {/* <button>프로필 변경</button> */}
         </div>

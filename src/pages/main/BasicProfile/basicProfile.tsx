@@ -1,13 +1,13 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import styles from "./firstProfile.module.scss";
+import styles from "./basicProfile.module.scss";
 import ProfileCard from "@component/ProfileCard/ProfileCard";
 import ImgBasic from "@assets/image/basic.png";
 import { useEffect, useState } from "react";
-import { BasicProfile } from "types/Profile";
+import { Profile } from "types/Profile";
 
-export default function FirstProfile() {
+export default function BasicProfile() {
   const navigate = useNavigate();
-  const [profile, setProfile] = useState<BasicProfile>({
+  const [profile, setProfile] = useState<Profile>({
     id: 1,
     name: "기본 프로필",
     img: ImgBasic,
@@ -22,7 +22,7 @@ export default function FirstProfile() {
   }, []);
 
   const onClickSwitchProfile = () => {
-    return navigate("/profile");
+    return navigate("/profiles");
   };
 
   return (

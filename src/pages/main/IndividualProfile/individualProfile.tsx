@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import styles from "./thirdProfile.module.scss";
+import styles from "./individualProfile.module.scss";
 import ProfileCard from "@component/ProfileCard/ProfileCard";
 import WideCardComponent from "@component/WideCard/WideCard";
 import PaintBoardComponent from "@component/PaintBoard/PaintBoard";
 import { Project } from "types/Content";
-import { BasicProfile } from "types/Profile";
-import ImgAdult from "@assets/image/adult.png";
+import { Profile } from "types/Profile";
+import ImgIndividual from "@assets/image/individual.png";
 
 const projects: Project[] = [
   {
@@ -20,18 +20,18 @@ const projects: Project[] = [
     link: [
       {
         name: "깃허브 코드 확인하러 가기",
-        url: "https://github.com/ksh200070/portfolio/blob/develop/src/pages/main/ThirdProfile/thirdProfile.tsx",
+        url: "https://github.com/ksh200070/portfolio/blob/develop/src/pages/main/IndividualProfile/individualProfile.tsx",
       },
     ],
   },
 ];
 
-export default function ThirdProfile() {
+export default function IndividualProfile() {
   const navigate = useNavigate();
-  const [profile, setProfile] = useState<BasicProfile>({
+  const [profile, setProfile] = useState<Profile>({
     id: 3,
     name: "개발자",
-    img: ImgAdult,
+    img: ImgIndividual,
   });
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function ThirdProfile() {
   }, []);
 
   const onClickSwitchProfile = () => {
-    return navigate("/profile");
+    return navigate("/profiles");
   };
 
   return (

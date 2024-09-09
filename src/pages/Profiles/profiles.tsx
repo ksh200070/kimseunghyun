@@ -1,30 +1,30 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./profile.module.scss";
-import ImgAdult from "@assets/image/adult.png";
+import styles from "./profiles.module.scss";
 import ImgBasic from "@assets/image/basic.png";
-import ImgStudent from "@assets/image/student.png";
+import ImgTeam from "@assets/image/team.png";
+import ImgIndividual from "@assets/image/individual.png";
 import ProfileCardComponent from "@component/ProfileCard/ProfileCard";
-import { BasicProfile } from "types/Profile";
+import { Profile } from "types/Profile";
 
-export default function Profile() {
+export default function Profiles() {
   const navigate = useNavigate();
-  const profileList: BasicProfile[] = [
+  const profileList: Profile[] = [
     { id: 1, name: "기본 프로필", img: ImgBasic },
-    { id: 2, name: "대학생", img: ImgStudent },
-    { id: 3, name: "개발자", img: ImgAdult },
+    { id: 2, name: "개인 프로젝트", img: ImgIndividual },
+    { id: 3, name: "팀 프로젝트", img: ImgTeam },
   ];
 
   const onClickProfile = useCallback(
-    (profile: BasicProfile) => {
+    (profile: Profile) => {
       localStorage.setItem("profile", JSON.stringify(profile));
 
       if (profile.id === 1) {
         navigate(`/basic`);
       } else if (profile.id === 2) {
-        navigate(`/student`);
+        navigate(`/individual`);
       } else if (profile.id === 3) {
-        navigate(`/developer`);
+        navigate(`/team`);
       }
     },
     [navigate]

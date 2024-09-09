@@ -1,8 +1,8 @@
-import { BasicProfile } from "../../types/Profile";
+import { Profile } from "../../types/Profile";
 import styles from "./ProfileCard.module.scss";
 
 interface ProfileProps {
-  profile: BasicProfile;
+  profile: Profile;
   onClick: () => void;
   size?: "sm" | "md";
 }
