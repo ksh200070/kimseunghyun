@@ -4,7 +4,7 @@ import styles from "./ProfileCard.module.scss";
 interface ProfileProps {
   profile: Profile;
   onClick: () => void;
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
 }
 
 const ProfileCardComponent: React.FC<ProfileProps> = ({

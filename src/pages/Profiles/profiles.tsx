@@ -33,7 +33,7 @@ export default function Profiles() {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.header}>프로필을 선택해주세요</div>
+        <div className={styles.header}>어떤 이야기를 들려드릴까요?</div>
         <div className={styles["profile-list"]}>
           {profileList.map((profile, i) => {
             return (
@@ -41,6 +41,7 @@ export default function Profiles() {
                 key={profile.id}
                 profile={profile}
                 onClick={() => onClickProfile(profile)}
+                size="lg"
               ></ProfileCardComponent>
             );
           })}
