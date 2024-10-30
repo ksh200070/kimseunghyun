@@ -1,0 +1,25 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  gap: 60px;
+
+  .header {
+    color: #fff;
+    text-align: center;
+    @include font-7;
+    font-size: 36px;
+  }
+
+  .profile-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+  }
+}

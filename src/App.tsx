@@ -1,19 +1,19 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "@pages/Home/home";
-import FirstProfile from "@pages/main/FirstProfile/firstProfile";
-import SecondProfile from "@pages/main/SecondProfile/secondProfile";
-import ThirdProfile from "@pages/main/ThirdProfile/thirdProfile";
-import Profile from "@pages/Profile/profile";
+import BasicProfile from "@pages/main/BasicProfile/basicProfile";
+import TeamProfile from "@pages/main/TeamProfile/teamProfile";
+import IndividualProfile from "@pages/main/IndividualProfile/individualProfile";
+import Profiles from "@pages/Profiles/profiles";
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/basic" element={<FirstProfile />} />
-        <Route path="/student" element={<SecondProfile />} />
-        <Route path="/developer" element={<ThirdProfile />} />
+        <Route path="/profiles" element={<Profiles />} />
+        <Route path="/basic" element={<BasicProfile />} />
+        <Route path="/team" element={<TeamProfile />} />
+        <Route path="/individual" element={<IndividualProfile />} />
       </Routes>
     </div>
   );
