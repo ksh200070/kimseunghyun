@@ -4,13 +4,14 @@ import styles from "./individualProfile.module.scss";
 import ProfileCard from "@component/ProfileCard/ProfileCard";
 import WideCardComponent from "@component/WideCard/WideCard";
 import PaintBoardComponent from "@component/PaintBoard/PaintBoard";
+import ImgIndividual from "@assets/image/individual.png";
 import { Project } from "types/Content";
 import { Profile } from "types/Profile";
-import ImgIndividual from "@assets/image/individual.png";
 
 const projects: Project[] = [
   {
     id: 1,
+    isDevProject: true,
     title: "Fabric.js를 활용한 캔버스 그림판",
     component: <PaintBoardComponent></PaintBoardComponent>,
     memberCount: 0,
@@ -23,7 +24,16 @@ const projects: Project[] = [
         url: "https://github.com/ksh200070/portfolio/blob/develop/src/pages/main/IndividualProfile/individualProfile.tsx",
       },
     ],
+    notes: [],
   },
+  // {
+  //   id: 1,
+  //   title: "Fabric.js를 활용한 캔버스 그림판",
+  //   isDevProject: true,
+  //   description:
+  //     "여러가지 색상의 브러쉬, 되돌리기, 다운로드 및 저장 의 기능을 제공합니다.",
+  //   notes: [""],
+  // },
 ];
 
 export default function IndividualProfile() {

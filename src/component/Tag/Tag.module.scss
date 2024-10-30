@@ -1,12 +1,15 @@
 .container {
   width: fit-content;
   height: fit-content;
-  padding: 6px 24px;
-  border: 1px solid #5e5e5e;
-  border-radius: 4px;
+  padding: 6px 14px;
+  /* border: 1px solid #5e5e5e; */
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffe000;
+  font-family: "Pretendard";
+  font-weight: 500;
   @include font-5;
 
   &.sm {
@@ -16,8 +19,8 @@
 
     .name {
       font-size: 12px;
+      color: #2c2c2c;
       @include font-4;
-      color: #fff500;
     }
   }
 
@@ -25,21 +28,21 @@
     cursor: pointer;
 
     .name {
-      color: #fff;
+      color: #2c2c2c;
       font-size: 14px;
-      @include font-4;
+      @include font-6;
     }
 
-    &:hover {
-      border: 1px solid #a7a7a7;
-      @include font-7;
-    }
+    // &:hover {
+    //   border: 1px solid #a7a7a7;
+    //   @include font-7;
+    // }
 
-    &.selected {
-      background-color: #5e5e5e;
-      border: none;
-      cursor: default;
-      @include font-5;
-    }
+    // &.selected {
+    //   background-color: #5e5e5e;
+    //   border: none;
+    //   cursor: default;
+    //   @include font-5;
+    // }
   }
 }
