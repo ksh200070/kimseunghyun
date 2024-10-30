@@ -17,11 +17,11 @@ const projects: Project[] = [
     memberCount: 0,
     description:
       "여러가지 색상의 브러쉬, 되돌리기, 다운로드 및 저장 의 기능을 제공합니다.",
-    video: "/portfolio/videos/paint.mov",
+    video: "/kimseunghyun/videos/paint.mov",
     link: [
       {
         name: "깃허브 코드 확인하러 가기",
-        url: "https://github.com/ksh200070/portfolio/blob/develop/src/pages/main/IndividualProfile/individualProfile.tsx",
+        url: "https://github.com/ksh200070/kimseunghyun/blob/develop/src/pages/main/IndividualProfile/individualProfile.tsx",
       },
     ],
     notes: [],
