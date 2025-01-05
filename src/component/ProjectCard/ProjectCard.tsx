@@ -6,15 +6,14 @@ import { Project } from "types/Content";
 
 interface ProjectCardProps {
   project: Project;
-  // className: string;
 }
 
-const ProjectCardComponent: React.FC<ProjectCardProps> = ({
-  project,
-  // className,
-}) => {
+const ProjectCardComponent: React.FC<ProjectCardProps> = ({ project }) => {
+  const clickCard = () => {};
+
   return (
     <div
+      onClick={clickCard}
       className={`${styles["card-container"]} ${
         project.isDevProject ? styles.dev : styles.design
       }`}
@@ -33,16 +32,24 @@ const ProjectCardComponent: React.FC<ProjectCardProps> = ({
       </div>
       <span className={styles.title}>{project.title}</span>
       <span className={styles.description}>{project.description}</span>
-      <div className={styles.tags}>
-        {project.tags?.map((tag, index) => (
-          <TagComponent tagName={tag}></TagComponent>
-        ))}
-      </div>
-      <div className={styles.notes}>
-        {project.notes.map((note, i) => {
-          return <span className={styles.note}>{note}</span>;
-        })}
-      </div>
+      {project.thumbnail ? (
+        <div className={styles.thumbnail}>
+          <img src={project.thumbnail}></img>
+        </div>
+      ) : (
+        <>
+          <div className={styles.tags}>
+            {project.tags?.map((tag, index) => (
+              <TagComponent tagName={tag}></TagComponent>
+            ))}
+          </div>
+          <div className={styles.notes}>
+            {project.notes.map((note, i) => {
+              return <span className={styles.note}>{note}</span>;
+            })}
+          </div>
+        </>
+      )}
     </div>
   );
 };

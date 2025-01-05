@@ -1,0 +1,46 @@
+.container {
+  width: 40%;
+  position: absolute;
+  top: 65%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 4px;
+  margin: 8px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #303030;
+    border-radius: 4px 4px 0 0;
+
+    .title {
+      flex-grow: 1;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      width: 24px;
+      background: none;
+
+      .icon {
+        width: 100%;
+      }
+    }
+  }
+
+  .content {
+    border-radius: 0 0 4px 4px;
+    background-color: #252525;
+    padding: 12px;
+    font-size: 18px;
+    color: #a9a9a9;
+    border: 1px solid #303030;
+    line-height: 1.4;
+  }
+}
