@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #303030;
+  border-radius: 4px 4px 0 0;
+
+  .title {
+    flex-grow: 1;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    background: none;
+
+    .icon {
+      width: 100%;
+    }
+  }
+}

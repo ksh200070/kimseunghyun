@@ -13,6 +13,7 @@ export interface Project {
   title: string;
   description: ReactNode | string;
   notes: string[];
+  thumbnail?: string;
 
   subTitle?: string;
   memberCount?: number;

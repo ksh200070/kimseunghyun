@@ -1,7 +1,6 @@
-import styles from " ./ContentCard.module.scss";
-
-import Tag from "@component/Tag/Tag";
 import { ReactNode } from "react";
+import Tag from "@component/Tag/Tag";
+import styles from " ./ContentCard.module.scss";
 
 interface ContentCardProps {
   title: string;
