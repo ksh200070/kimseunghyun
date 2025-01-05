@@ -2,6 +2,7 @@ import styles from "./ComponentGroup.module.scss";
 import ProjectCardComponent from "../../component/ProjectCard/ProjectCard";
 import TooltipThumbnail from "../../assets/image/components/tooltip.png";
 import AccordionThumbnail from "../../assets/image/components/accordion.png";
+import IconLeftArrow from "../../assets/icon/icon_left_arrow.png";
 import { useNavigate } from "react-router-dom";
 
 export default function ComponentGroup() {
@@ -10,10 +11,16 @@ export default function ComponentGroup() {
   return (
     <>
       <div className={styles.container}>
-        <button className={styles.prev} onClick={() => navigate("/")}>
-          이전 페이지로 이동
-        </button>
-        <h1>Component List</h1>
+        <section className={styles.header}>
+          <button className={styles.prev} onClick={() => navigate("/")}>
+            <img src={IconLeftArrow} alt="" />
+          </button>
+          <h1 className={styles.title}>Component List</h1>
+          <span className={styles.description}>
+            여러곳에서 쓰일 수 있는 요소들을 재사용이 가능하도록 유연한
+            컴포넌트로 구현하였습니다.
+          </span>
+        </section>
         <div className={styles.list}>
           <ProjectCardComponent
             project={{

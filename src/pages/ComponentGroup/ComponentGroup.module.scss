@@ -1,29 +1,51 @@
 .container {
   width: 100vw;
   height: 100vh;
-  padding: 0 60px;
+  padding: 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   background-color: #11171e;
   color: #fff;
 
+  .header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    .description {
+      margin-top: 12px;
+      color: #cdd6df;
+      @include paybooc-4;
+    }
+  }
+
+  .title {
+    @include baijamjuree-1;
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
   .prev {
     margin-top: 40px;
-    padding: 10px;
-    width: 160px;
+    padding: 4px 6px;
+    width: fit-content;
     height: fit-content;
     border: none;
     border-radius: 4px;
-    @include font-7;
-    background-color: #5e5e5e;
+    font-family: "Pretendard";
+    font-weight: 700;
+    background-color: #222c36;
     color: #fff;
 
     &:hover {
-      background-color: #fff;
-      color: #000;
+      background-color: #454c53;
       cursor: pointer;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -33,7 +55,6 @@
     padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
   }
 }
