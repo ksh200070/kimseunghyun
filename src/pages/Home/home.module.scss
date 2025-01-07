@@ -3,7 +3,8 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #000;
+  align-items: center;
+  background-color: #202632;
 
   .header {
     width: 100%;
@@ -14,7 +15,22 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    justify-content: space-between;
+    padding: 20px 80px;
+    position: fixed;
+    background-color: #202632;
+    box-shadow: 0 0px 51px #0000005c;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include baijamjuree-1;
+      gap: 8px;
+
+      .icon {
+        width: 40px;
+      }
+    }
   }
 
   .goto-component-group {
@@ -23,31 +39,165 @@
   }
 
   .body {
+    width: 100%;
+    padding-left: 100px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     color: #fff;
     gap: 20px;
-    font-size: 20px;
     @include font-4;
+    font-size: 32px;
 
-    .start-button {
-      padding: 10px;
-      width: 160px;
-      height: fit-content;
+    .icon {
+      width: 44px;
+    }
+
+    .title {
+      @include baijamjuree-1;
+    }
+
+    .description {
+      color: #cdd6df;
+      @include paybooc-4;
+      line-height: 1.6;
+    }
+  }
+
+  .footer {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    .down-arrow-button {
+      background-color: #454c53;
       border: none;
       border-radius: 4px;
-      @include font-7;
-      background-color: #5e5e5e;
-      color: #fff;
+      width: 48px;
+      height: 32px;
+      box-shadow: 0 0px 5px rgb(255 255 255 / 18%);
+      cursor: pointer;
 
-      &:hover {
-        background-color: #fff;
-        color: #000;
-        cursor: pointer;
+      .icon-down-arrow {
+        width: 32px;
       }
     }
   }
+}
+
+.experience-section {
+  width: 100vw;
+  height: fit-content;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #202632;
+
+  .experience {
+    width: 1120px;
+    color: #fff;
+
+    h1 {
+      font-size: 60px;
+      color: #fff;
+      @include baijamjuree-1;
+      margin-top: 100px;
+    }
+
+    &.work h1 {
+      text-decoration: underline #ff6e00;
+    }
+    &.project h1 {
+      text-decoration: underline #0064ff;
+    }
+    &.study h1 {
+      text-decoration: underline #00ff88;
+    }
+
+    .group {
+      width: 100%;
+      height: fit-content;
+
+      .card {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 100px;
+
+        .label {
+          min-width: 400px;
+          width: 400px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+
+          h2 {
+            @include font-7;
+            font-size: 36px;
+          }
+
+          .info {
+            @include baijamjuree-7;
+            font-size: 18px;
+          }
+        }
+
+        .contents {
+          flex-grow: 1;
+
+          .content {
+            margin-bottom: 100px;
+
+            .label {
+              width: 100%;
+
+              .role {
+                margin-left: 8px;
+              }
+            }
+            .details {
+              margin-top: 40px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 28px;
+
+              .name {
+                @include font-5;
+                font-size: 20px;
+                margin-bottom: 10px;
+              }
+
+              .description {
+                @include font-3;
+                font-size: 20px;
+                line-height: 1.4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon-info {
+  width: 24px;
+  margin-left: 8px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #cdd6df9e;
+  margin-bottom: 100px;
+}
+
+ul {
+  padding-inline-start: 40px;
 }

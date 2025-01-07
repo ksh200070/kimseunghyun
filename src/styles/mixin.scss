@@ -53,5 +53,9 @@
 }
 @mixin baijamjuree-1 {
   font-family: "Bai_Jamjuree";
-  font-weight: 900;
+  font-weight: 900; //bold
+}
+@mixin baijamjuree-7 {
+  font-family: "Bai_Jamjuree";
+  font-weight: 200; // light
 }
