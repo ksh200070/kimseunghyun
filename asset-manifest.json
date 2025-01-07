@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "https://ksh200070.github.io/kimseunghyun/static/css/main.db7d9061.css",
-    "main.js": "https://ksh200070.github.io/kimseunghyun/static/js/main.75dee589.js",
+    "main.css": "https://ksh200070.github.io/kimseunghyun/static/css/main.a627db4a.css",
+    "main.js": "https://ksh200070.github.io/kimseunghyun/static/js/main.0d5400b9.js",
     "static/media/paybooc-ExtraBold.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-ExtraBold.8a9c6be665ad9b3e070f.otf",
     "static/media/paybooc-Medium.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-Medium.c34d2bcd5bdcd9fd87df.otf",
     "static/media/paybooc-Bold.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-Bold.d8d7af09c12757596927.otf",
@@ -9,7 +9,6 @@
     "static/media/team.png": "https://ksh200070.github.io/kimseunghyun/static/media/team.d7583d39df6012c7910f.png",
     "static/media/basic.png": "https://ksh200070.github.io/kimseunghyun/static/media/basic.0989a998d0eeae9178dd.png",
     "static/media/individual.png": "https://ksh200070.github.io/kimseunghyun/static/media/individual.0e0f2d80858013f50494.png",
-    "static/media/profile.png": "https://ksh200070.github.io/kimseunghyun/static/media/profile.36fc8ff1344fe0fecbf5.png",
     "static/media/BaiJamjuree-Medium.ttf": "https://ksh200070.github.io/kimseunghyun/static/media/BaiJamjuree-Medium.e9ce20a140d9d6fd2425.ttf",
     "static/media/BaiJamjuree-Light.ttf": "https://ksh200070.github.io/kimseunghyun/static/media/BaiJamjuree-Light.e818fb7a908b8cd26055.ttf",
     "static/media/BaiJamjuree-Bold.ttf": "https://ksh200070.github.io/kimseunghyun/static/media/BaiJamjuree-Bold.da1cfc75e1ff64984f88.ttf",
@@ -17,11 +16,11 @@
     "static/media/tooltip.png": "https://ksh200070.github.io/kimseunghyun/static/media/tooltip.e6d2972aeed547903005.png",
     "static/media/icon_download_tool.png": "https://ksh200070.github.io/kimseunghyun/static/media/icon_download_tool.a061f3a52bd3a82485a6.png",
     "index.html": "https://ksh200070.github.io/kimseunghyun/index.html",
-    "main.db7d9061.css.map": "https://ksh200070.github.io/kimseunghyun/static/css/main.db7d9061.css.map",
-    "main.75dee589.js.map": "https://ksh200070.github.io/kimseunghyun/static/js/main.75dee589.js.map"
+    "main.a627db4a.css.map": "https://ksh200070.github.io/kimseunghyun/static/css/main.a627db4a.css.map",
+    "main.0d5400b9.js.map": "https://ksh200070.github.io/kimseunghyun/static/js/main.0d5400b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.db7d9061.css",
-    "static/js/main.75dee589.js"
+    "static/css/main.a627db4a.css",
+    "static/js/main.0d5400b9.js"
   ]
 }
