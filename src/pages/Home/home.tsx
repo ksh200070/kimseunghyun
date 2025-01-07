@@ -4,6 +4,7 @@ import Tooltip from "@component/Tooltip/Tooltip";
 import IconHome from "@assets/icon/icon_home.png";
 import IconDownArrow from "@assets/icon/icon_down_arrow_white.png";
 import IconInfo from "@assets/icon/icon_info_white.png";
+import PaintBoardComponent from "@component/PaintBoard/PaintBoard";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.body}>
+          <PaintBoardComponent></PaintBoardComponent>
           <div className={styles.description}>
             안녕하세요.
             <br />웹 프론트엔드 개발자 &nbsp;
