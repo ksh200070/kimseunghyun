@@ -36,8 +36,8 @@ const PaintBoardComponent = ({}) => {
     if (!canvasRef.current) return;
 
     const newCanvas = new fabric.Canvas(canvasRef.current, {
-      width: 600,
-      height: 400,
+      width: 360,
+      height: 200,
       backgroundColor: "white",
     });
 
