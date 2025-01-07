@@ -20,6 +20,9 @@ const colorPalette = [
 ];
 
 const PaintBoardComponent = ({}) => {
+  const [browserWidth, setBrowserWidth] = useState<number>(0);
+  const resizeTimer = useRef<any>(null);
+
   const [canvas, setCanvas] = useState<fabric.Canvas | null>();
   const [activeTool, setActiveTool] = useState<string>("select");
 
@@ -31,6 +34,30 @@ const PaintBoardComponent = ({}) => {
     color: string;
     hexCode: string;
   }>(colorPalette[0]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (resizeTimer.current !== null) return;
+      resizeTimer.current = setTimeout(() => {
+        resizeTimer.current = null;
+        setBrowserWidth(window.innerWidth);
+      }, 200);
+    };
+    window.addEventListener("resize", handleResize);
+    console.log(browserWidth);
+
+    if (!canvas) return;
+
+    if (browserWidth < 768) {
+      canvas.setWidth(browserWidth);
+    } else {
+      canvas.setWidth(360);
+    }
+
+    return () => {
+      window.addEventListener("resize", handleResize);
+    };
+  }, [browserWidth]);
 
   useEffect(() => {
     if (!canvasRef.current) return;

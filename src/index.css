@@ -8,3 +8,13 @@ body {
   font-family: "Paybooc";
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+/* Mobile view size*/
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
