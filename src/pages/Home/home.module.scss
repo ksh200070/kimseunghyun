@@ -9,16 +9,16 @@
   .header {
     width: 100%;
     color: #fff;
-    padding: 20px;
-    font-size: 28px;
+    padding: 2rem;
+    font-size: 2.8rem;
     @include font-4;
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px 80px;
+    gap: 2rem;
+    padding: 2rem 8rem;
     position: fixed;
     background-color: #202632;
-    box-shadow: 0 0px 51px #0000005c;
+    box-shadow: 0 0 5rem #0000005c;
     z-index: 999;
 
     .title {
@@ -26,16 +26,16 @@
       align-items: center;
       justify-content: center;
       @include baijamjuree-1;
-      gap: 8px;
+      gap: 0.8rem;
 
       .icon {
-        width: 40px;
+        width: 4rem;
       }
     }
   }
 
   .goto-component-group {
-    padding: 4px 8px;
+    padding: 0.4rem 0.8rem;
     cursor: pointer;
   }
 
@@ -47,12 +47,12 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    gap: 40px;
+    gap: 4rem;
     @include font-4;
-    font-size: 32px;
+    font-size: 2.8rem;
 
     .icon {
-      width: 44px;
+      width: 4.4rem;
     }
 
     .title {
@@ -72,19 +72,19 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 
     .down-arrow-button {
       background-color: #454c53;
       border: none;
-      border-radius: 4px;
-      width: 48px;
-      height: 32px;
-      box-shadow: 0 0px 5px rgb(255 255 255 / 18%);
+      border-radius: 0.4rem;
+      width: 4.8rem;
+      height: 3.2rem;
+      box-shadow: 0 0rem 0.5rem rgb(255 255 255 / 18%);
       cursor: pointer;
 
       .icon-down-arrow {
-        width: 32px;
+        width: 3.2rem;
       }
     }
   }
@@ -93,21 +93,21 @@
 .experience-section {
   width: 100vw;
   height: fit-content;
-  padding: 40px;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #202632;
 
   .experience {
-    width: 1120px;
+    width: 112rem;
     color: #fff;
 
     h1 {
-      font-size: 60px;
+      font-size: 6rem;
       color: #fff;
       @include baijamjuree-1;
-      margin-top: 100px;
+      margin-top: 10rem;
     }
 
     &.work h1 {
@@ -128,24 +128,24 @@
         width: 100%;
         display: flex;
         align-items: flex-start;
-        margin-top: 100px;
+        margin-top: 10rem;
 
         .label {
-          min-width: 400px;
-          width: 400px;
+          min-width: 40rem;
+          width: 40rem;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          gap: 20px;
+          gap: 2rem;
 
           h2 {
             @include font-7;
-            font-size: 36px;
+            font-size: 3.6rem;
           }
 
           .info {
             @include baijamjuree-7;
-            font-size: 18px;
+            font-size: 1.8rem;
           }
         }
 
@@ -153,31 +153,31 @@
           flex-grow: 1;
 
           .content {
-            margin-bottom: 100px;
+            margin-bottom: 10rem;
 
             .label {
               width: 100%;
 
               .role {
-                margin-left: 8px;
+                margin-left: 0.8rem;
               }
             }
             .details {
-              margin-top: 40px;
+              margin-top: 4rem;
               display: flex;
               flex-direction: column;
               align-items: flex-start;
-              gap: 28px;
+              gap: 2.8rem;
 
               .name {
                 @include font-5;
-                font-size: 20px;
-                margin-bottom: 10px;
+                font-size: 2rem;
+                margin-bottom: 1rem;
               }
 
               .description {
                 @include font-3;
-                font-size: 20px;
+                font-size: 2rem;
                 line-height: 1.4;
               }
             }
@@ -189,17 +189,122 @@
 }
 
 .icon-info {
-  width: 24px;
-  margin-left: 8px;
+  width: 2.4rem;
+  margin-left: 0.8rem;
 }
 
 hr {
   border: none;
-  height: 1px;
+  height: 0.1rem;
   background-color: #cdd6df9e;
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 }
 
 ul {
-  padding-inline-start: 40px;
+  padding-inline-start: 4rem;
+}
+
+/* Mobile view size*/
+@media (max-width: 768px) {
+  html {
+    font-size: 36%;
+  }
+
+  .experience-section {
+    width: 100vw;
+    height: fit-content;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #202632;
+
+    .experience {
+      width: 100%;
+      color: #fff;
+
+      h1 {
+        font-size: 6rem;
+        color: #fff;
+        @include baijamjuree-1;
+        margin-top: 10rem;
+      }
+
+      &.work h1 {
+        text-decoration: underline #ff6e00;
+      }
+      &.project h1 {
+        text-decoration: underline #0064ff;
+      }
+      &.study h1 {
+        text-decoration: underline #00ff88;
+      }
+
+      .group {
+        width: 100%;
+        height: fit-content;
+
+        .card {
+          width: 100%;
+          display: flex;
+          align-items: flex-start;
+          margin-top: 10rem;
+
+          .label {
+            min-width: 40rem;
+            width: 40rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+
+            h2 {
+              @include font-7;
+              font-size: 3.6rem;
+            }
+
+            .info {
+              @include baijamjuree-7;
+              font-size: 1.8rem;
+            }
+          }
+
+          .contents {
+            flex-grow: 1;
+
+            .content {
+              margin-bottom: 10rem;
+
+              .label {
+                width: 100%;
+
+                .role {
+                  margin-left: 0.8rem;
+                }
+              }
+              .details {
+                margin-top: 4rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2.8rem;
+
+                .name {
+                  @include font-5;
+                  font-size: 2rem;
+                  margin-bottom: 1rem;
+                }
+
+                .description {
+                  @include font-3;
+                  font-size: 2rem;
+                  line-height: 1.4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
