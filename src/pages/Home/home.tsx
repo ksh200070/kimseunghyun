@@ -46,7 +46,7 @@ export default function Home() {
           <h1>Work Experience</h1>
           <div className={styles.group}>
             <div className={styles.card}>
-              <div className={styles.label}>
+              <div className={`${styles.label} ${styles.category}`}>
                 <h2>(주)유룸</h2>
                 <div className={styles.info}>
                   <span className={styles.date}>2023.03 - 2024.02</span>
