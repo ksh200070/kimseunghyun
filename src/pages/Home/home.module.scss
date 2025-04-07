@@ -1,20 +1,18 @@
 .container {
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #202632;
+  position: relative;
 
+  // main > header
   .header {
     width: 100%;
     color: #fff;
-    padding: 2rem;
     font-size: 2.8rem;
-    @include font-4;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
     padding: 2rem 8rem;
     position: fixed;
     top: 0;
@@ -164,12 +162,36 @@
                 margin-left: 0.8rem;
               }
             }
+            .links {
+              margin-top: 10px;
+              a {
+                text-decoration: none;
+                // color: inherit;
+                text-decoration: underline;
+                background-color: #fff;
+                margin: 4px;
+                padding: 2px 4px;
+              }
+            }
             .details {
               margin-top: 4rem;
               display: flex;
               flex-direction: column;
               align-items: flex-start;
               gap: 2.8rem;
+
+              .detail {
+                .img-container {
+                  width: 100%;
+                  max-height: 400px;
+                  overflow: scroll;
+                  border-radius: 2px;
+
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
 
               .name {
                 @include font-5;
@@ -211,9 +233,12 @@ ul {
   html {
     font-size: 36%;
   }
+  .container {
+    width: 100%;
+  }
 
   .experience-section {
-    width: 100vw;
+    // width: 100vw;
     height: fit-content;
     padding: 4rem;
     display: flex;

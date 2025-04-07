@@ -7,6 +7,8 @@
 body {
   font-family: "Paybooc";
   box-sizing: border-box;
+  /* width: 100vw; */
+  height: 100vh;
 }
 
 html {

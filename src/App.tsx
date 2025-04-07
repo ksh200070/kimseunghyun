@@ -8,16 +8,16 @@ import Profiles from "@pages/Profiles/profiles";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ComponentGroup" element={<ComponentGroup />} />
-        <Route path="/profiles" element={<Profiles />} />
-        <Route path="/basic" element={<BasicProfile />} />
-        <Route path="/team" element={<TeamProfile />} />
-        <Route path="/individual" element={<IndividualProfile />} />
-      </Routes>
-    </div>
+    // <div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/ComponentGroup" element={<ComponentGroup />} />
+      <Route path="/profiles" element={<Profiles />} />
+      <Route path="/basic" element={<BasicProfile />} />
+      <Route path="/team" element={<TeamProfile />} />
+      <Route path="/individual" element={<IndividualProfile />} />
+    </Routes>
+    // </div>
   );
 }
 

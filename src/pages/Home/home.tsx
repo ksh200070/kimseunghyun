@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./home.module.scss";
 import Tooltip from "@component/Tooltip/Tooltip";
+import ImgDaangn from "@assets/image/daangn2.png";
 import IconHome from "@assets/icon/icon_home.png";
 import IconDownArrow from "@assets/icon/icon_down_arrow_white.png";
 import IconInfo from "@assets/icon/icon_info_white.png";
@@ -185,6 +186,37 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.contents}>
+                <div className={styles.content}>
+                  <section className={styles.label}>
+                    <h2>(개인) 당근마켓 클론</h2>
+                    <div className={styles.info}>
+                      <span className={styles.date}>2025.04 (1DAY)</span>
+                      <span className={styles.role}> | HTML, CSS, JS </span>
+                      <div className={styles.links}>
+                        <a href="https://ksh200070.github.io/style-practice/">
+                          URL
+                        </a>
+                        <a href="https://github.com/ksh200070/style-practice">
+                          GitHub
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+                  <section className={styles.details}>
+                    <div className={styles.detail}>
+                      <div className={styles.description}>
+                        반응형 웹과 스타일링 연습을 위한 당근마켓 클론코딩
+                        프로젝트입니다.
+                      </div>
+                    </div>
+                    <div className={styles.detail}>
+                      <div className={`${styles["img-container"]}`}>
+                        <img src={ImgDaangn} alt="thumbnail image" />
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
                 <div className={styles.content}>
                   <section className={styles.label}>
                     <h2>(팀) Chatty</h2>
