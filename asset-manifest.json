@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "https://ksh200070.github.io/kimseunghyun/static/css/main.932200ff.css",
-    "main.js": "https://ksh200070.github.io/kimseunghyun/static/js/main.276b156c.js",
+    "main.css": "https://ksh200070.github.io/kimseunghyun/static/css/main.79b7090f.css",
+    "main.js": "https://ksh200070.github.io/kimseunghyun/static/js/main.a39e57ff.js",
+    "static/media/daangn2.png": "https://ksh200070.github.io/kimseunghyun/static/media/daangn2.8c85957d19692d1f7580.png",
     "static/media/paybooc-ExtraBold.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-ExtraBold.8a9c6be665ad9b3e070f.otf",
     "static/media/paybooc-Medium.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-Medium.c34d2bcd5bdcd9fd87df.otf",
     "static/media/paybooc-Bold.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-Bold.d8d7af09c12757596927.otf",
@@ -16,11 +17,11 @@
     "static/media/tooltip.png": "https://ksh200070.github.io/kimseunghyun/static/media/tooltip.e6d2972aeed547903005.png",
     "static/media/icon_download_tool.png": "https://ksh200070.github.io/kimseunghyun/static/media/icon_download_tool.a061f3a52bd3a82485a6.png",
     "index.html": "https://ksh200070.github.io/kimseunghyun/index.html",
-    "main.932200ff.css.map": "https://ksh200070.github.io/kimseunghyun/static/css/main.932200ff.css.map",
-    "main.276b156c.js.map": "https://ksh200070.github.io/kimseunghyun/static/js/main.276b156c.js.map"
+    "main.79b7090f.css.map": "https://ksh200070.github.io/kimseunghyun/static/css/main.79b7090f.css.map",
+    "main.a39e57ff.js.map": "https://ksh200070.github.io/kimseunghyun/static/js/main.a39e57ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.932200ff.css",
-    "static/js/main.276b156c.js"
+    "static/css/main.79b7090f.css",
+    "static/js/main.a39e57ff.js"
   ]
 }
