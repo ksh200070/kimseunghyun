@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./home.module.scss";
 import Tooltip from "@component/Tooltip/Tooltip";
-import ImgDaangn from "@assets/image/daangn2.png";
+import ImgDaangn from "@assets/image/daangn.png";
+import ImgBrowserMockup from "@assets/image/chrome-mac-light.png";
 import IconHome from "@assets/icon/icon_home.png";
 import IconDownArrow from "@assets/icon/icon_down_arrow_white.png";
 import IconInfo from "@assets/icon/icon_info_white.png";
@@ -121,10 +122,10 @@ export default function Home() {
         <div className={`${styles.project} ${styles.experience}`}>
           <h1>Project Experience</h1>
           <div className={styles.group}>
-            {/* 연합 IT 동아리 */}
+            {/* 개발 IT 동아리 */}
             <div className={styles.card}>
               <div className={styles.label}>
-                <h2>연합 IT 동아리</h2>
+                <h2>개발 IT 동아리</h2>
                 <div className={styles.info}>
                   <span className={styles.date}>2022.03 - 2023.01</span>
                 </div>
@@ -193,10 +194,16 @@ export default function Home() {
                       <span className={styles.date}>2025.04 (1DAY)</span>
                       <span className={styles.role}> | HTML, CSS, JS </span>
                       <div className={styles.links}>
-                        <a href="https://ksh200070.github.io/style-practice/">
+                        <a
+                          target="_blank"
+                          href="https://ksh200070.github.io/style-practice/"
+                        >
                           URL
                         </a>
-                        <a href="https://github.com/ksh200070/style-practice">
+                        <a
+                          target="_blank"
+                          href="https://github.com/ksh200070/style-practice"
+                        >
                           GitHub
                         </a>
                       </div>
@@ -209,9 +216,27 @@ export default function Home() {
                         프로젝트입니다.
                       </div>
                     </div>
-                    <div className={styles.detail}>
-                      <div className={`${styles["img-container"]}`}>
-                        <img src={ImgDaangn} alt="thumbnail image" />
+                    <div className={`${styles.detail} ${styles.img}`}>
+                      <img
+                        className={`${styles["mockup-bg"]}`}
+                        src={ImgBrowserMockup}
+                        alt="thumbnail image"
+                      />
+
+                      <span className={styles.title}>당근마켓 클론 사이트</span>
+                      <a
+                        target="_blank"
+                        className={styles.url}
+                        href="https://ksh200070.github.io/style-practice/"
+                      >
+                        https://ksh200070.github.io/style-practice/
+                      </a>
+                      <div className={`${styles["scroll-area"]}`}>
+                        <img
+                          className={`${styles["img-daangn"]}`}
+                          src={ImgDaangn}
+                          alt="thumbnail image"
+                        />
                       </div>
                     </div>
                   </section>
@@ -304,7 +329,7 @@ export default function Home() {
           <div className={styles.group}>
             <div className={styles.card}>
               <div className={styles.label}>
-                <h2>연합 IT 동아리</h2>
+                <h2>개발 IT 동아리</h2>
                 <div className={styles.info}>
                   <span className={styles.date}>2022.03 - 2023.01</span>
                 </div>
