@@ -114,7 +114,13 @@
       text-decoration: underline #ff6e00;
     }
     &.project h1 {
-      text-decoration: underline #0064ff;
+      h1 {
+        text-decoration: underline #0064ff;
+      }
+
+      & .card:last-child {
+        margin-top: 40px;
+      }
     }
     &.study h1 {
       text-decoration: underline #00ff88;
@@ -162,19 +168,9 @@
                 margin-left: 0.8rem;
               }
             }
-            .links {
-              margin-top: 10px;
-              a {
-                text-decoration: none;
-                // color: inherit;
-                text-decoration: underline;
-                background-color: #fff;
-                margin: 4px;
-                padding: 2px 4px;
-              }
-            }
+
             .details {
-              margin-top: 4rem;
+              margin-top: 2rem;
               display: flex;
               flex-direction: column;
               align-items: flex-start;
@@ -190,12 +186,16 @@
                   @include font-3;
                   font-size: 2rem;
                   line-height: 1.4;
+                  font-family: Arial, Helvetica, sans-serif;
                 }
 
                 // image detail
                 &.img {
                   width: 100%;
                   height: 540px;
+
+                  // width: 60%;
+                  // height: 504px;
                   position: relative;
 
                   a:hover {
@@ -212,7 +212,7 @@
                     left: 28%;
                     text-decoration: none;
                     color: #202632;
-                    font-size: 18px;
+                    font-size: 1.8rem;
                   }
                   .url {
                     text-decoration: none;
@@ -220,7 +220,7 @@
                     position: absolute;
                     top: 14.5%;
                     left: 25%;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                   }
                   .mockup-bg {
                     position: absolute;
@@ -237,9 +237,27 @@
                     overflow: scroll;
                     border-radius: 2px;
 
-                    .img-daangn {
+                    &.horizon {
+                      gap: 12px;
+                      height: 100%;
+                      padding: 20px;
+                    }
+
+                    &.chatty-imgs {
+                      bottom: -114px;
+                      height: 100%;
+                      align-items: center;
+                      overflow-y: hidden;
+                      border-radius: 0 0 12px 12px;
+                      // margin-bottom: 20px;
+                    }
+
+                    .img-web {
                       width: 99%;
                       margin: auto;
+                    }
+                    .img-mobile {
+                      border-radius: 14px;
                     }
                   }
                 }
@@ -304,7 +322,13 @@ ul {
         text-decoration: underline #ff6e00;
       }
       &.project h1 {
-        text-decoration: underline #0064ff;
+        h1 {
+          text-decoration: underline #0064ff;
+        }
+
+        & .card:last-child {
+          margin-top: 40px;
+        }
       }
       &.study h1 {
         text-decoration: underline #00ff88;
@@ -318,8 +342,7 @@ ul {
           width: 100%;
           display: flex;
           flex-direction: column;
-          gap: 10rem;
-          // align-items: flex-start;
+          gap: 4rem;
           margin-top: 10rem;
 
           .label {
@@ -379,14 +402,34 @@ ul {
                   font-size: 2rem;
                   line-height: 1.4;
                 }
+
+                .detail.img {
+                  display: none;
+                }
               }
             }
           }
         }
       }
-
-      .category {
-      }
     }
   }
+}
+
+// 공통
+.links {
+  margin-top: 10px;
+  font-size: 1.6;
+
+  a {
+    text-decoration: none;
+    text-decoration: underline;
+    margin-right: 8px;
+    color: cyan;
+    letter-spacing: 2px;
+  }
+}
+
+* {
+  font-family: auto;
+  font-weight: 400;
 }
