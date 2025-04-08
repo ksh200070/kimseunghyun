@@ -5,7 +5,9 @@
 }
 
 body {
-  font-family: "Paybooc";
+  font-family: "Pretendard";
+  font-weight: 400;
+
   box-sizing: border-box;
   /* width: 100vw; */
   height: 100vh;

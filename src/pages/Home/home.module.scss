@@ -7,13 +7,15 @@
   align-items: center;
   background-color: #202632;
   position: relative;
+  overflow-x: scroll;
 
   // main > header
   .header {
-    width: 100%;
+    margin: 2rem;
     color: #fff;
-    font-size: 2.8rem;
-    padding: 2rem 8rem;
+    font-size: 2.4rem;
+    padding: 1.8rem 3.6rem;
+    border-radius: 45%;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,7 +50,7 @@
     justify-content: center;
     color: #fff;
     gap: 4rem;
-    @include font-4;
+    @include font-3;
     font-size: 2.8rem;
 
     .icon {
@@ -61,7 +63,7 @@
 
     .description {
       color: #cdd6df;
-      @include paybooc-4;
+      @include font-3;
       line-height: 1.6;
       text-align: center;
     }
@@ -113,13 +115,13 @@
     &.work h1 {
       text-decoration: underline #ff6e00;
     }
-    &.project h1 {
+    &.project {
       h1 {
         text-decoration: underline #0064ff;
       }
 
       & .card:last-child {
-        margin-top: 40px;
+        margin-top: 20rem;
       }
     }
     &.study h1 {
@@ -186,7 +188,6 @@
                   @include font-3;
                   font-size: 2rem;
                   line-height: 1.4;
-                  font-family: Arial, Helvetica, sans-serif;
                 }
 
                 // image detail
@@ -204,9 +205,6 @@
                   }
 
                   .title {
-                    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-                      "Helvetica Neue", sans-serif;
                     position: absolute;
                     top: 5%;
                     left: 28%;
@@ -325,10 +323,6 @@ ul {
         h1 {
           text-decoration: underline #0064ff;
         }
-
-        & .card:last-child {
-          margin-top: 40px;
-        }
       }
       &.study h1 {
         text-decoration: underline #00ff88;
@@ -427,9 +421,4 @@ ul {
     color: cyan;
     letter-spacing: 2px;
   }
-}
-
-* {
-  font-family: auto;
-  font-weight: 400;
 }

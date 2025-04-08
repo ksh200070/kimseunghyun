@@ -428,7 +428,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        ㄴ{/* Study Experience */}
+        {/* Study Experience */}
         <div className={`${styles.study} ${styles.experience}`}>
           <h1>Study Experience</h1>
           <div className={styles.group}>
