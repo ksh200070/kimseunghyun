@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "https://ksh200070.github.io/kimseunghyun/static/css/main.79b7090f.css",
-    "main.js": "https://ksh200070.github.io/kimseunghyun/static/js/main.a39e57ff.js",
-    "static/media/daangn2.png": "https://ksh200070.github.io/kimseunghyun/static/media/daangn2.8c85957d19692d1f7580.png",
+    "main.css": "https://ksh200070.github.io/kimseunghyun/static/css/main.019f61d8.css",
+    "main.js": "https://ksh200070.github.io/kimseunghyun/static/js/main.54404871.js",
+    "static/media/daangn.png": "https://ksh200070.github.io/kimseunghyun/static/media/daangn.4425118b0e194782354d.png",
     "static/media/paybooc-ExtraBold.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-ExtraBold.8a9c6be665ad9b3e070f.otf",
     "static/media/paybooc-Medium.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-Medium.c34d2bcd5bdcd9fd87df.otf",
     "static/media/paybooc-Bold.otf": "https://ksh200070.github.io/kimseunghyun/static/media/paybooc-Bold.d8d7af09c12757596927.otf",
@@ -16,12 +16,13 @@
     "static/media/accordion.png": "https://ksh200070.github.io/kimseunghyun/static/media/accordion.857806e0e1b516cdd8c3.png",
     "static/media/tooltip.png": "https://ksh200070.github.io/kimseunghyun/static/media/tooltip.e6d2972aeed547903005.png",
     "static/media/icon_download_tool.png": "https://ksh200070.github.io/kimseunghyun/static/media/icon_download_tool.a061f3a52bd3a82485a6.png",
+    "static/media/chrome-mac-light.png": "https://ksh200070.github.io/kimseunghyun/static/media/chrome-mac-light.8e9df1f21b21cdd92ed2.png",
     "index.html": "https://ksh200070.github.io/kimseunghyun/index.html",
-    "main.79b7090f.css.map": "https://ksh200070.github.io/kimseunghyun/static/css/main.79b7090f.css.map",
-    "main.a39e57ff.js.map": "https://ksh200070.github.io/kimseunghyun/static/js/main.a39e57ff.js.map"
+    "main.019f61d8.css.map": "https://ksh200070.github.io/kimseunghyun/static/css/main.019f61d8.css.map",
+    "main.54404871.js.map": "https://ksh200070.github.io/kimseunghyun/static/js/main.54404871.js.map"
   },
   "entrypoints": [
-    "static/css/main.79b7090f.css",
-    "static/js/main.a39e57ff.js"
+    "static/css/main.019f61d8.css",
+    "static/js/main.54404871.js"
   ]
 }
